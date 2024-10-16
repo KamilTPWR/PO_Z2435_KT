@@ -7,5 +7,13 @@ public class Main {
         System.out.println();
         p1.showInfo();
         p2.showInfo();
+
+        System.out.println();
+
+        Calculator calc = new Calculator();
+        calc.showInfo(p1,p2);
+
+        Circle circle = new Circle(p1,p2);
+        circle.showInfo();
     }
 }
