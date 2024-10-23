@@ -3,6 +3,8 @@ public class Main {
     public static void main(String[] args) {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(3, 4);
+        Point p3 = new Point(3, 5);
+        Point p4 = new Point(6, 7);
 
         System.out.println();
         p1.showInfo();
@@ -15,5 +17,14 @@ public class Main {
 
         Circle circle = new Circle(p1,p2);
         circle.showInfo();
+
+        Square square = new Square(p1,p2,p3,p4);
+        square.showInfo();
+
+        Triangle triangle = new Triangle(p1,p2,p3);
+        triangle.showInfo();
+
+        System.out.println(calc.calculateAreaSum(square,triangle));
+
     }
 }

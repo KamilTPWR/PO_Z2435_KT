@@ -12,6 +12,10 @@ public class Calculator {
     public double distance(Point p1, Point p2){
         return Math.sqrt((distanceX(p1,p2)*distanceX(p1, p2))+(distanceY(p1,p2)*distanceY(p1, p2)));
     }
+    public double calculateAreaSum(Shape shape1, Shape shape2){
+        return (shape1.area()+shape2.area());
+    }
+
     public void showInfo(Point p1, Point p2){
         System.out.println("Dystans X:" + distanceX(p1,p2));
         System.out.println("Dystans Y:" + distanceY(p1,p2));

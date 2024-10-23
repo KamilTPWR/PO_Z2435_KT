@@ -9,8 +9,7 @@ public class Triangle extends Shape{
 
     public double area(){
         Calculator cal = new Calculator();
-        double area = ((cal.distance(a , b) * cal.distance(a , b) * Math.sqrt(3) )/4);
-        return area;
+        return ((cal.distance(a , b) * cal.distance(a , b) * Math.sqrt(3) )/4);
     }
 
     @Override
