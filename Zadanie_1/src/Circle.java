@@ -1,15 +1,31 @@
 import java.lang.Math;
 
-public class Circle {
+public class Circle extends Shape{
+
+
+    private double radius;
+    private Point center;
     private double area;
     private double circumference;
 
-    public Circle(Point p1, Point p2) {
-        Calculator cal = new Calculator();
-        var radius = cal.distance(p1, p2)/2;
-        this.area = (Math.PI * radius*radius)*0.5;
-        this.circumference = (2* Math.PI * radius);
+    public double area(){
+        area = Math.PI * radius * radius;
+        return area;
     }
+
+    @Override
+    public double circumference(){
+        return 2 * Math.PI * radius;
+    }
+
+    public Circle(Point center, Point p2) {
+        this.center = center;
+                Calculator cal = new Calculator();
+        this.radius = cal.distance(center, p2)/2;
+        this.area = area();
+        this.circumference();
+    }
+
 
     public double getArea() {
         return area;
