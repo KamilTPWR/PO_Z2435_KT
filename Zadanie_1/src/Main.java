@@ -18,7 +18,15 @@ public class Main {
         Circle circle = new Circle(p1,p2);
         circle.showInfo();
 
-        Square square = new Square(p1,p2,p3,p4);
+        //Sliczny konstrukt
+        Square square;
+        try {
+            square = new Square(p1,p2,p3,p4);
+        } catch (BadShapeException errorMessage) {
+            errorMessage.printMessage();
+            throw new RuntimeException(errorMessage); //Runtime Aby przerwac dziaalanie programu
+        }
+
         square.showInfo();
 
         Triangle triangle = new Triangle(p1,p2,p3);
