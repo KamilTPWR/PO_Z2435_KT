@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         //Punkty do kwadratu
         Point p1 = new Point(0, 0);
-        Point p2 = new Point(0, 1);
+        Point p2 = new Point(2, 1);
         Point p3 = new Point(1, 1);
         Point p4 = new Point(1, 0);
 
@@ -31,6 +31,8 @@ public class Main {
         } catch (BadShapeException errorMessage) {
             errorMessage.printMessage();
             throw new RuntimeException(errorMessage); //Runtime Aby przerwac dzialanie programu
+        }finally {
+            System.out.println("Force Quit: _BadShapeException_");
         }
         square.showInfo();
 
@@ -41,6 +43,8 @@ public class Main {
         } catch (BadShapeException errorMessage) {
             errorMessage.printMessage();
             throw new RuntimeException(errorMessage); //Runtime Aby przerwac dzialanie programu
+        }finally {
+            System.out.println("Force Quit: _BadShapeException_");
         }
         triangle.showInfo();
 
