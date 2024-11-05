@@ -37,7 +37,14 @@ public class Triangle extends Shape{
     }
 
     private boolean isTriangle(Point p1, Point p2, Point p3) {
-        return true;
+        Calculator calculator = new Calculator();
+
+        double d1 = calculator.distance(p1, p2);
+        double d2 = calculator.distance(p2, p3);
+        double d3 = calculator.distance(p3, p1);
+
+        // Check the triangle inequality
+        return (d1 + d2 > d3) && (d1 + d3 > d2) && (d2 + d3 > d1);
     }
 
     public double getArea() {

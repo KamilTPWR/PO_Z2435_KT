@@ -37,7 +37,7 @@ public class Main {
         //Sliczny konstrukt
         Triangle triangle;
         try {
-            triangle = new Triangle(p1,p2,p3);
+            triangle = new Triangle(p5,p6,p7);
         } catch (BadShapeException errorMessage) {
             errorMessage.printMessage();
             throw new RuntimeException(errorMessage); //Runtime Aby przerwac dzialanie programu
