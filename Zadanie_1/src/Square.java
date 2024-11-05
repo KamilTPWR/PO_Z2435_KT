@@ -36,8 +36,14 @@ public class Square extends Shape{
     }
 
     private boolean isSquare(Point p1, Point p2, Point p3, Point p4) {
+        Calculator calculator = new Calculator();
 
-        return false;
+        double d1 = calculator.distance(p1, p2);
+        double d2 = calculator.distance(p2, p3);
+        double d3 = calculator.distance(p3, p4);
+        double d4 = calculator.distance(p4, p1);
+
+        return d1 > 0 && d1 == d2 && d2 == d3 && d3 == d4; // zamiast pisać if i dawać TRUE
     }
 
     public double getArea() {

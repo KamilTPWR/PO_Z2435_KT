@@ -1,15 +1,22 @@
 public class Triangle extends Shape{
 
-
     private Point a;
     private Point b;
     private Point c;
     private double area;
     private double circumference;
 
+    //Użycie od teraz wzoru Herona
     public double area(){
         Calculator cal = new Calculator();
-        return ((cal.distance(a , b) * cal.distance(a , b) * Math.sqrt(3) )/4);
+
+        double sideA = cal.distance(a, b);
+        double sideB = cal.distance(b, c);
+        double sideC = cal.distance(c, a);
+
+        double s = (sideA + sideB + sideC) / 2;
+
+        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
     }
 
     @Override
@@ -25,7 +32,6 @@ public class Triangle extends Shape{
         this.circumference = circumference();
         this.area = area();
     }
-
 
     public double getArea() {
         return area;

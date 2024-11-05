@@ -1,10 +1,16 @@
 
 public class Main {
     public static void main(String[] args) {
-        Point p1 = new Point(1, 2);
-        Point p2 = new Point(3, 4);
-        Point p3 = new Point(3, 5);
-        Point p4 = new Point(6, 7);
+        //Punkty do kwadratu
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(0, 1);
+        Point p3 = new Point(1, 1);
+        Point p4 = new Point(1, 0);
+
+        //Punkty do trójkąta
+        Point p5 = new Point(0, 0);
+        Point p6 = new Point(1, 0);
+        Point p7 = new Point(0, 1);
 
         System.out.println();
         p1.showInfo();
@@ -26,6 +32,8 @@ public class Main {
             errorMessage.printMessage();
             throw new RuntimeException(errorMessage); //Runtime Aby przerwac dziaalanie programu
         }
+
+
 
         square.showInfo();
 
