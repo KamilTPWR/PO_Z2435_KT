@@ -25,12 +25,19 @@ public class Triangle extends Shape{
         return cal.distance(a , b)+cal.distance(b, c)+cal.distance(a, c);
     }
 
-    public Triangle(Point p1, Point p2, Point p3) {
+    public Triangle(Point p1, Point p2, Point p3) throws BadShapeException {
+        if (!isTriangle(p1, p2, p3)) {  // Check if points form a triangle
+            throw new BadShapeException("Not a Triangle");
+        }
         this.a = p1;
         this.b = p2;
         this.c = p3;
         this.circumference = circumference();
         this.area = area();
+    }
+
+    private boolean isTriangle(Point p1, Point p2, Point p3) {
+        return true;
     }
 
     public double getArea() {

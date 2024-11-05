@@ -30,14 +30,18 @@ public class Main {
             square = new Square(p1,p2,p3,p4);
         } catch (BadShapeException errorMessage) {
             errorMessage.printMessage();
-            throw new RuntimeException(errorMessage); //Runtime Aby przerwac dziaalanie programu
+            throw new RuntimeException(errorMessage); //Runtime Aby przerwac dzialanie programu
         }
-
-
-
         square.showInfo();
 
-        Triangle triangle = new Triangle(p1,p2,p3);
+        //Sliczny konstrukt
+        Triangle triangle;
+        try {
+            triangle = new Triangle(p1,p2,p3);
+        } catch (BadShapeException errorMessage) {
+            errorMessage.printMessage();
+            throw new RuntimeException(errorMessage); //Runtime Aby przerwac dzialanie programu
+        }
         triangle.showInfo();
 
         System.out.println(calc.calculateAreaSum(square,triangle));
